@@ -1,7 +1,6 @@
-const BASE_URL = `${process.env.REACT_APP_BACK_END_SERVER_URL}`
+const BASE_URL = `${process.env.REACT_APP_BACK_END_SERVER_URL}/api/todos`;
 
 const create = async (todo) => {
-  console.log(BASE_URL)
   const res = await fetch(BASE_URL, {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
