@@ -20,6 +20,7 @@ import * as todoService from './services/todoService'
 
 // styles
 import './App.css'
+import TodoCard from './components/TodoList/TodoCard/TodoCard'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -79,6 +80,7 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+        <Route path="/todo" element={<TodoCard />} />
         <Route path='/addtodo' element={<AddTodo handleAddTodo={handleAddTodo}/>} />
 
 

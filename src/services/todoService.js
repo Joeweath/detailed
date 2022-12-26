@@ -10,11 +10,21 @@ const create = async (todo) => {
 }
 
 const getAll = async () => {
-  const res = await fetch(BASE_URL)
-  return res.json
+  try{
+    const res = await fetch(BASE_URL)
+    const data = await res.json()
+    return data
+  } catch (error) {
+    throw error
+  }
+}
+
+const getTodoDetail = async (id) => {
+  const res = await fetch(`${BASE_URL}/${id}`);
+  return await res.json();
 }
 
 
 export {
-  create, getAll
+  create, getAll, getTodoDetail
 }
