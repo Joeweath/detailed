@@ -9,6 +9,7 @@ import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import AddTodo from './pages/AddTodo/AddTodo'
+import EditTodo from './pages/EditTodo/EditTodo'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -51,6 +52,17 @@ const App = () => {
     fetchAllTodos()
   }, [])
 
+  // const handleUpdateTodo = async updateTodoData => {
+  //   const updatedTodo = await todoService.todoUpdate(updateTodoData);
+  //   const newTodoArray = this.state.todos(to =>
+  //     to._id === updatedTodo._id ? updatedTodo : to
+  //     );
+  //     this.setState(
+  //       {todos: newTodoArray},
+  //       () => this.props.history.push('/todos')
+  //     )
+  // }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -82,6 +94,7 @@ const App = () => {
         />
         <Route path="/:id" element={<TodoCard />} />
         <Route path='/addtodo' element={<AddTodo handleAddTodo={handleAddTodo}/>} />
+        <Route path='/edit' element={<EditTodo />} />
 
 
       </Routes>

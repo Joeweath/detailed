@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { getTodoDetail } from "../../../services/todoService";
-import { useParams,  useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
 const TodoCard = (props) => {
   const { id } = useParams()
-  const navigate = useNavigate()
   
   const [todo, setTodo] = useState()
   props = todo
@@ -34,6 +34,22 @@ const TodoCard = (props) => {
           <h3>Loading</h3>
         )
       }
+
+<div className="card-footer">
+        <Link
+          className='btn btn-sm btn-warning'
+          to='/edit'
+          state={{todo}}
+        >
+          Edit
+        </Link>
+        <button 
+          className="btn btn-sm btn-danger m-left"
+          // onClick={() => handleDeletePuppy(puppy._id)}
+        >
+          Delete
+        </button>
+      </div>
       
 
 
