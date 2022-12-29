@@ -31,18 +31,31 @@ const getTodoDetail = async (todoId) => {
   }
 }
 
-const todoUpdate = async (todo) => {
-  try {
-    const res = await fetch(`${BASE_URL}/${todo._Id}`,
+// const todoUpdate = async (todo) => {
+//   try {
+//     const res = await fetch(`${BASE_URL}/${todo._Id}`,
+//     {
+//       method: "PUT",
+//       headers: {'content-type': 'application/json'},
+//       body: JSON.stringify(todo)
+//     })
+//     return res.json();
+//   } catch (error){
+//     return error
+//   }
+// }
+
+async function todoUpdate(todo) {
+  console.log(todo, todo._id)
+
+  const res = await fetch(`${BASE_URL}/${todo}`,
     {
       method: "PUT",
-      headers: {'content-type': 'application'/json},
+      headers: {'content-type': 'application/json'},
       body: JSON.stringify(todo)
-    })
-    return res.json();
-  } catch (error){
-    return error
-  }
+    });
+  return await res.json(todo);
+  
 }
 
 

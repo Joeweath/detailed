@@ -52,16 +52,16 @@ const App = () => {
     fetchAllTodos()
   }, [])
 
-  // const handleUpdateTodo = async updateTodoData => {
-  //   const updatedTodo = await todoService.todoUpdate(updateTodoData);
-  //   const newTodoArray = this.state.todos(to =>
-  //     to._id === updatedTodo._id ? updatedTodo : to
-  //     );
-  //     this.setState(
-  //       {todos: newTodoArray},
-  //       () => this.props.history.push('/todos')
-  //     )
-  // }
+  const handleUpdateTodo = updatedTodoData => {
+    todoService.todoUpdate(updatedTodoData)
+    .then(upatedTodo => {
+      const newTodosArray = todos.map(todo => 
+        todo._id === upatedTodo._id ? upatedTodo : todo
+        )
+        setTodos(newTodosArray)
+        navigate('/')
+    })
+  }
 
   return (
     <>
@@ -94,7 +94,7 @@ const App = () => {
         />
         <Route path="/:id" element={<TodoCard />} />
         <Route path='/addtodo' element={<AddTodo handleAddTodo={handleAddTodo}/>} />
-        <Route path='/edit' element={<EditTodo />} />
+        <Route path='/edit' element={<EditTodo handleUpdateTodo={handleUpdateTodo}/>} />
 
 
       </Routes>
