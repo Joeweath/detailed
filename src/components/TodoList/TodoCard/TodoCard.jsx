@@ -21,6 +21,7 @@ const TodoCard = (props) => {
     }
     fetchTodo()
   }, [id])
+  console.log(props)
   return (
     <div className="todo-card">
       {
@@ -43,9 +44,8 @@ const TodoCard = (props) => {
         >
           Edit
         </Link>
-        <button 
-          className="btn btn-sm btn-danger m-left"
-          // onClick={() => handleDeletePuppy(puppy._id)}
+        <button
+          onClick={() => props ? props.handleDelete(props.todo._id) : props}
         >
           Delete
         </button>

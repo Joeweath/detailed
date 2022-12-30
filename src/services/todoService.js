@@ -31,22 +31,9 @@ const getTodoDetail = async (todoId) => {
   }
 }
 
-// const todoUpdate = async (todo) => {
-//   try {
-//     const res = await fetch(`${BASE_URL}/${todo._Id}`,
-//     {
-//       method: "PUT",
-//       headers: {'content-type': 'application/json'},
-//       body: JSON.stringify(todo)
-//     })
-//     return res.json();
-//   } catch (error){
-//     return error
-//   }
-// }
 
-async function todoUpdate(todo) {
-  console.log(todo, todo._id)
+
+const todoUpdate = async (todo)  => {
 
   const res = await fetch(`${BASE_URL}/${todo}`,
     {
@@ -54,12 +41,22 @@ async function todoUpdate(todo) {
       headers: {'content-type': 'application/json'},
       body: JSON.stringify(todo)
     });
-  return await res.json(todo);
-  
+  return await res.json(todo); 
+}
+
+const deleteTodo = async (todo) => {
+  try{
+    await fetch(`${BASE_URL}/${todo}`,
+    {
+      method: "DELETE",
+    });
+  } catch (error){
+    throw error
+  }
 }
 
 
 export {
-  create, getAll, getTodoDetail, todoUpdate
+  create, getAll, getTodoDetail, todoUpdate, deleteTodo
 
 }

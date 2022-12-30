@@ -63,6 +63,16 @@ const App = () => {
     })
   }
 
+  
+  const handleDelete = async (todoId) => {
+    try {
+      await todoService.deleteTodo(todoId)
+      setTodos(todos.filter((todo) => todo._id !== todoId))
+    } catch (error) {
+      throw error
+    } 
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -92,7 +102,7 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-        <Route path="/:id" element={<TodoCard />} />
+        <Route path="/:id" element={<TodoCard handleDelete={handleDelete}/>} />
         <Route path='/addtodo' element={<AddTodo handleAddTodo={handleAddTodo}/>} />
         <Route path='/edit' element={<EditTodo handleUpdateTodo={handleUpdateTodo}/>} />
 
