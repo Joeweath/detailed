@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getTodoDetail } from "../../../services/todoService";
+import { getTodoDetail } from "../../services/todoService";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -7,9 +7,8 @@ import { Link } from "react-router-dom";
 
 const TodoCard = (props) => {
   const { id } = useParams()
-  
   const [todo, setTodo] = useState()
-  props = todo
+  
   useEffect(() => {
     const fetchTodo = async () => {
       try {
@@ -21,7 +20,6 @@ const TodoCard = (props) => {
     }
     fetchTodo()
   }, [id])
-  console.log(props)
   return (
     <div className="todo-card">
       {
@@ -45,10 +43,11 @@ const TodoCard = (props) => {
           Edit
         </Link>
         <button
-          onClick={() => props ? props.handleDelete(props.todo._id) : props}
+          onClick={() => props.handleDelete(todo._id)}
         >
           Delete
         </button>
+
       </div>
       
 

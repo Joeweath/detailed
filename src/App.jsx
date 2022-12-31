@@ -14,7 +14,7 @@ import EditTodo from './pages/EditTodo/EditTodo'
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
-import TodoCard from './components/TodoList/TodoCard/TodoCard'
+import TodoCard from './components/TodoCard/TodoCard'
 
 // services
 import * as authService from './services/authService'
@@ -68,6 +68,7 @@ const App = () => {
     try {
       await todoService.deleteTodo(todoId)
       setTodos(todos.filter((todo) => todo._id !== todoId))
+      navigate('/')
     } catch (error) {
       throw error
     } 

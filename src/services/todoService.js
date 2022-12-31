@@ -46,14 +46,13 @@ const todoUpdate = async (todo)  => {
 
 const deleteTodo = async (todo) => {
   try{
-    await fetch(`${BASE_URL}/${todo}`,
-    {
-      method: "DELETE",
-    });
+    await fetch(`${BASE_URL}/${todo}`, {method: "DELETE",});
   } catch (error){
     throw error
   }
 }
+
+
 
 
 export {
