@@ -21,7 +21,7 @@ const Landing = ({ user }) => {
 
   return (
     <main className={styles.container}>
-      <TodoList todos={todos}/>
+      <TodoList todos={todos} user={user}/>
     </main>
   )
 }

@@ -31,7 +31,7 @@ const App = () => {
   const handleLogout = () => {
     authService.logout()
     setUser(null)
-    navigate('/')
+    navigate('/signup')
   }
 
   const handleSignupOrLogin = () => {
@@ -104,7 +104,7 @@ const App = () => {
           }
         />
         <Route path="/:id" element={<TodoCard handleDelete={handleDelete}/>} />
-        <Route path='/addtodo' element={<AddTodo handleAddTodo={handleAddTodo}/>} />
+        <Route path='/addtodo' element={<AddTodo user={user} handleAddTodo={handleAddTodo}/> } />
         <Route path='/edit' element={<EditTodo handleUpdateTodo={handleUpdateTodo}/>} />
 
 

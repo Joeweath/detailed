@@ -1,20 +1,24 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const AddTodo = (props) => {
-
+ 
   const [formData, setFormData] = useState({
     title: '',
     content: '',
-    date: ''
+    date: '',
+    owner: props.user.profile,
   })
+
   const [validForm, setValidForm] = useState(false)
   const formElement = useRef()
 
   const handleChange = evt => {
-    setFormData({ ...formData, [evt.target.name]: evt.target.value })
+    
+    setFormData({ ...formData, [evt.target.name]: evt.target.value}, )
   }
 
   const handleSubmit = evt => {
+  
     evt.preventDefault()
     props.handleAddTodo(formData)
   }
