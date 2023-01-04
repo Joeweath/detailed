@@ -27,7 +27,7 @@ const TodoCard = (props) => {
         <div>
             <h3>{todo.title}</h3>
             <p>{todo.content}</p>
-            <p>{todo.date}</p>
+            <p>{Date(todo.date).slice(0, 15)}</p>
         </div>
         ) : (
           <h3>Loading</h3>

@@ -22,6 +22,8 @@ import * as todoService from './services/todoService'
 
 // styles
 import './App.css'
+import AltTodoList from './components/AltTodoList/AltTodoList'
+import TodoList from './components/TodoList/TodoList'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -31,7 +33,7 @@ const App = () => {
   const handleLogout = () => {
     authService.logout()
     setUser(null)
-    navigate('/signup')
+    navigate('/' ? 'signup' : '/')
   }
 
   const handleSignupOrLogin = () => {
@@ -103,10 +105,11 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+        <Route path="/" element={<TodoList user={user} />} />
         <Route path="/:id" element={<TodoCard handleDelete={handleDelete}/>} />
         <Route path='/addtodo' element={<AddTodo user={user} handleAddTodo={handleAddTodo}/> } />
         <Route path='/edit' element={<EditTodo handleUpdateTodo={handleUpdateTodo}/>} />
-
+        <Route path='/' element={<AltTodoList user={user}/>} />
 
       </Routes>
     </>
