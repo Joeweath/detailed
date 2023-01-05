@@ -1,19 +1,89 @@
 nav{
-    background-color: rgb(125, 150, 175);
-    box-shadow: 2.1px 2.1px 2.1px rgb(68, 68, 68);
+    background-color: rgb(250, 247, 243);
+    box-shadow: 2.1px 2.1px 2.1px rgb(211, 207, 207);
     display: flex;
+    width: 100%;
+    font-size: 1.5rem;
 }
 
-ul{
-    margin: 0;
-}
-.home {
-    justify-self: end;
+.navlinks {
+    display: flex;
+    width: 100vw; 
+    flex-direction: row;   
 }
 
-.paragraph {
-    color: white;
+span {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.lefticons {
+    justify-content: space-evenly;
     font-weight: bold;
+    
 }
+
+.righticons {
+    flex-direction: row;
+    justify-content: flex-end;
+    column-gap: 1rem;
+    align-items: center;
+
+    
+}
+
+.logo {
+    order: 0;
+    color: grey;
+    text-decoration: none;
+
+}
+
+.logo:hover {
+    color: rgb(221, 202, 202);
+}
+
+nav p {
+    color: grey;
+    order: 2;
+}
+
+.home {
+    order: 0;
+    color: grey;
+    text-decoration: none;
+
+
+}
+
+.home:hover {
+    color: rgb(221, 202, 202);
+}
+
+.addtodo {
+    order: 1;
+    color: grey;
+    text-decoration: none;
+
+}
+
+.addtodo:hover {
+    color: rgb(221, 202, 202);
+}
+
+.logout {
+    align-self: flex-end;
+    justify-self: center;
+    color: grey;
+    order: 3;
+    font-size: 1rem;
+}
+
+.logout:hover {
+    color: rgb(221, 202, 202);
+}
+
+
 
 

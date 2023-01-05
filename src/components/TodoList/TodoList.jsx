@@ -6,14 +6,13 @@ const TodoList = (props, user) => {
   let userList = []
   
   userList = []
-  !user  ? console.log("log in")
+  !user  ? <i class="fa-solid fa-spinner fa-spin-pulse fa-spin-reverse fa-2xl"></i>
   : 
   props.todos?.map((todo) => (
-    todo.owner === props.user.profile ? userList.push(todo) : console.log("not a match")
+    todo.owner === props.user.profile ? userList.push(todo) : <i class="fa-solid fa-spinner fa-spin-pulse fa-spin-reverse"></i>
     
     )) 
     
-    console.log(props, userList)
 
 
 
