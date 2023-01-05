@@ -8,8 +8,7 @@ ul{
     margin: 0;
 }
 .home {
-    color: white;
-    background-color: red;
+    justify-self: end;
 }
 
 .paragraph {

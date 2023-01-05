@@ -1,13 +1,12 @@
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styles from './NavBar.module.css'
-import {FaHouse} from 'react-icons/fa'
 
 const NavBar = ({ user, handleLogout }) => {
   return (
     <nav>
       {user ?
         <div>
-          <NavLink className={styles.home} to="/"><FontAwesomeIcon icon="fa-solid fa-house" /></NavLink>
+          <NavLink className={styles.home} to="/"><i class="fa-solid fa-house"></i></NavLink>
           <br />
           <NavLink className={styles.addtodo} to="/addtodo">Add To-Do</NavLink>
           <br />
