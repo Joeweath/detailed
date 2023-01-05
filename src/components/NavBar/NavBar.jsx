@@ -1,22 +1,25 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import styles from './NavBar.module.css'
+import {FaHouse} from 'react-icons/fa'
 
 const NavBar = ({ user, handleLogout }) => {
   return (
     <nav>
       {user ?
-        <ul>
-          <li>Welcome, {user.name}</li>
-          <li><Link to="/">To-Do-List</Link></li>
-          <li><Link to="/addtodo">Add To-Do</Link></li>
-          <li><Link to="/profiles">Profiles</Link></li>
-          <li><Link to="" onClick={handleLogout}>LOG OUT</Link></li>
-          <li><Link to="/changePassword">Change Password</Link></li>
-        </ul>
-      :
-        <ul>
-          <li><Link to="/login">Log In</Link></li>
-          <li><Link to="/signup">Sign Up</Link></li>
-        </ul>
+        <div>
+          <NavLink className={styles.home} to="/"><FontAwesomeIcon icon="fa-solid fa-house" /></NavLink>
+          <br />
+          <NavLink className={styles.addtodo} to="/addtodo">Add To-Do</NavLink>
+          <br />
+          <NavLink className={styles.logout} to="" onClick={handleLogout}>Logout</NavLink>
+        </div>
+        :
+        <div>
+
+          <NavLink className={styles.login} to="/login"></NavLink>
+          <NavLink className={styles.signup} to="/signup"></NavLink>
+        </div>
+
       }
     </nav>
   )

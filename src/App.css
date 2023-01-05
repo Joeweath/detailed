@@ -1,19 +1,25 @@
 html {
-  box-sizing: border-box
+  box-sizing: border-box;
+  
+  
 }
 
 
 *::before,
 *::after { 
   box-sizing: inherit;
+  
 }
 
 :root {
   font-size: 100%
+  
 }
 
 body {
-  background-color: skyblue;
-  background-repeat: no-repeat;
+  background-color: aliceblue;
+  height: 100vh;
+
+  
 
 }

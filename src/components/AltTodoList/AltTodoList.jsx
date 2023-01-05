@@ -13,15 +13,12 @@ const AltTodoList = ( user ) => {
                 <br />
                 with TO-DO
             </h1>
-            {user.profile  ? 
-            <Link to='addtodo'>
-                <button>Create To-Do</button>
+            <Link to='login'>
+                <button>Log In</button>
             </Link>
-            :
             <Link to='signup'>
                 <button>Sign Up</button>
             </Link>
-            }
 
         </div>
     )
