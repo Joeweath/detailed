@@ -1,0 +1,15 @@
+.altcontent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:  25%  25%  50%;
+}
+
+
+.h1header {
+    background-color: red;
+    grid-column-start: 1.5;
+    grid-column-end:  3;
+    align-self: flex-end;
+      
+}
+

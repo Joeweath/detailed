@@ -1,4 +1,46 @@
-.container {
-  width: 75%;
-  display: flex;
+
+
+.emptylist {
+ display: grid;
+ width: 100%;
+ grid-template-columns: repeat(7, 1fr);
+ grid-template-rows: 2fr .5fr 2fr;
+ row-gap: 1em;
+}
+
+.h1header {
+     grid-column-start: 3;
+     grid-column-end: 6;
+     text-align: center;
+     align-self: flex-end;
+     color: gray;
+}
+
+.todopic {
+    width: 100%;
+    height: auto;
+   grid-row-start: 3;
+   grid-column-start: 2;
+   grid-column-end: 4;
+
+}
+.createtodo {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    align-self: center;
+    justify-self: center;
+    
+    
+}
+
+.quote {
+    color: gray;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    width: 100%;
+    align-self: flex-start;
+    font-weight: 400;
+    font-size: 1.5em;
 }

@@ -30,7 +30,7 @@ const TodoCard = (props) => {
             <p>{Date(todo.date).slice(0, 15)}</p>
         </div>
         ) : (
-          <h3>Loading</h3>
+          <i class="fa-solid fa-spinner fa-spin-pulse fa-spin-reverse fa-2xl"></i>
         )
       }
 

@@ -1,5 +1,21 @@
 .container {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  height: 100vh;
+  justify-content: center;
 }
+
+
+.landingcontent {
+  background-color: rgb(250, 247, 243, .6);
+  box-shadow:  3px 3px 3px 3px rgb(211, 207, 207);
+  border: .2px solid rgb(233, 212, 212);
+  border-radius: 2%;
+  height: 70%;
+  width: 75%;
+  display: flex;
+
+}
+
+
