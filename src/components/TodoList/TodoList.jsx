@@ -17,19 +17,22 @@ const TodoList = (props, user) => {
 
 
 
-
+console.log(userList.length)
 
   return (
 
-    <div className={userList.length > 0 ? styles.listcontainer : styles.emptylist}>
+    <div className={userList.length  > 0 ? styles.listcontainer : styles.emptylist}>
 
       {
         userList.length > 0 ?
           userList.map((todo) => (
+            <div className={styles.todocard}>
             <Link to={todo._id} key={todo._id} >
-              <p>{todo.title}</p>
-              <p>{Date(todo.date).slice(0, 15)}</p>
+              <p className={styles.title}>{todo.title}</p>
+              <p className={styles.content}>{todo.content}</p>
+              <p className={styles.date} >{Date(todo.date).slice(0, 15)}</p>
             </Link>
+            </div>
 
           ))
           :

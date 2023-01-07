@@ -3,3 +3,10 @@
   align-items: center;
   flex-direction: column;
 }
+
+.logo {
+  
+  align-self: center;
+  color: gray;
+  font-size: 2rem;
+ }

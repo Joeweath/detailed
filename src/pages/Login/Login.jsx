@@ -11,7 +11,8 @@ const LoginPage = props => {
 
   return (
     <main className={styles.container}>
-      <h1>Log In</h1>
+      <h1 className={styles.logo}><i class="fa-solid fa-list-check fa-1xl">Detailed</i>  </h1>
+
       <p>{message}</p>
       <LoginForm
         handleSignupOrLogin={props.handleSignupOrLogin}

@@ -1,15 +1,59 @@
 .altcontent {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:  25%  25%  50%;
-}
+    width: 100%;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 2fr .5fr 2fr;
+    row-gap: 1em;
+   }
+
+   .logo {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    align-self: flex-start;
+    color: gray;
+   }
 
 
 .h1header {
-    background-color: red;
-    grid-column-start: 1.5;
-    grid-column-end:  3;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    text-align: center;
     align-self: flex-end;
-      
+    color: gray;
 }
 
+
+.todopic {
+    width: 100%;
+    height: auto;
+   grid-row-start: 3;
+   grid-column-start: 2;
+   grid-column-end: 4;
+
+}
+
+.quote {
+    color: gray;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    width: 100%;
+    align-self: flex-start;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+.login {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    align-self: center;
+    justify-self: flex-end;
+}
+
+.signup {
+    grid-column-start: 5;
+    grid-row-start: 2;
+    align-self: center;
+    justify-self: flex-start;
+}
