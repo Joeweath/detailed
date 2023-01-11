@@ -48,6 +48,8 @@ const SignupForm = props => {
       onSubmit={handleSubmit}
       className={styles.container}
     >
+      <div className={styles.signupcontainer}>
+      <h1 className={styles.h1header}>Sign Up</h1>
       <div className={styles.inputContainer}>
         <label htmlFor="name" className={styles.label}>Name</label>
         <input
@@ -112,6 +114,7 @@ const SignupForm = props => {
         <Link to="/">
           <button>Cancel</button>
         </Link>
+      </div>
       </div>
     </form>
   )

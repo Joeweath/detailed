@@ -22,6 +22,7 @@ const Landing = ({ user }) => {
 
   return (
     <main className={styles.container}>
+            
       <div className={styles.landingcontent}>
       {
         user ? 

@@ -32,8 +32,12 @@ const LoginForm = props => {
       onSubmit={handleSubmit}
       className={styles.container}
     >
+      
 
       <div className={styles.logincontainer}>
+      <h1 className={styles.logo}><i class="fa-solid fa-list-check fa-1xl">Detailed</i>  </h1>
+      <div className={styles.inputandbuttons}>
+
         <div className={styles.inputContainer}>
           <label htmlFor="email" className={styles.label}>Email</label>
           <input
@@ -56,12 +60,13 @@ const LoginForm = props => {
             onChange={handleChange}
           />
         </div>
-        <div>
-          <button className={styles.button}>Log In</button>
+        <div className={styles.buttondiv}>
+          <button className={styles.button}  class="btn btn-secondary btn-lg">Log In</button>
           <Link to="/">
-            <button>Cancel</button>
+            <button   class="btn btn-secondary btn-lg">Cancel</button>
           </Link>
         </div>
+      </div>
       </div>
     </form>
   )

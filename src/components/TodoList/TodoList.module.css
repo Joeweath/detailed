@@ -2,48 +2,70 @@
 /* Empty list css ⬇️⬇️⬇️⬇️ */
 
 .emptylist {
- display: grid;
- width: 100%;
- grid-template-columns: repeat(7, 1fr);
- grid-template-rows: 2fr .5fr 2fr;
- row-gap: 1em;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
 }
 
+.h1div{
+    
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.buttonsdiv{
+    align-self: center;
+    justify-self: center; 
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: row; 
+}
+
+.bottomdiv{
+    
+display: flex;
+flex-direction: row;
+flex-grow: 1;
+padding-top: 2rem;
+padding-bottom: 2rem;
+
+}
+
+.imgdiv{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.quotediv{
+    align-self: center;
+    text-align: center;
+
+}
+
+
+
 .h1header {
-     grid-column-start: 3;
-     grid-column-end: 6;
      text-align: center;
-     align-self: flex-end;
      color: gray;
 }
 
 .todopic {
-    width: 100%;
     height: auto;
-   grid-row-start: 3;
-   grid-column-start: 2;
-   grid-column-end: 4;
-
+    max-width: 80%;
+    border-radius: 2rem;
+    
 }
 .createtodo {
-    grid-column-start: 3;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    align-self: center;
-    justify-self: center;
-    
     
 }
 
 .quote {
     color: gray;
-    grid-column-start: 5;
-    grid-column-end: 7;
-    grid-row-start: 3;
-    width: 100%;
-    align-self: flex-start;
     font-weight: 400;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 
@@ -68,7 +90,8 @@
     border: .2px solid rgb(233, 212, 212);
     text-align: center;
     width: 20%;
-    height: auto;
+    flex-basis: 50%;
+    max-height: 50%;
     border-radius: 3%;
     display: flex;
     justify-content: center;

@@ -1,59 +1,93 @@
 .altcontent {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 2fr .5fr 2fr;
-    row-gap: 1em;
-   }
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
 
-   .logo {
-    grid-row-start: 1;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    align-self: flex-start;
+.h1div{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.buttonsdiv{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1; 
+    gap: 2rem; 
+    
+    
+}
+
+.bottomdiv{
+display: flex;
+flex-direction: row;
+flex-grow: 1;
+padding-top: 2rem;
+padding-bottom: 2rem;
+
+
+}
+
+.leftbutton{
+    flex-grow: 1;
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+
+}
+
+.rightbutton{
+    align-self: center;
+    flex-grow: 1;
+    display: flex;
+    
+}
+
+.imgdiv{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.quotediv{
+    align-self: center;
+    text-align: center;
+
+}
+
+.logo {
     color: gray;
-   }
+}
+
 
 
 .h1header {
-    grid-column-start: 3;
-    grid-column-end: 6;
     text-align: center;
-    align-self: flex-end;
     color: gray;
+    font-size: 4rem;
+
 }
 
 
 .todopic {
-    width: 100%;
     height: auto;
-   grid-row-start: 3;
-   grid-column-start: 2;
-   grid-column-end: 4;
-
+    max-width: 80%;
+    border-radius: 2rem;
+    
 }
 
 .quote {
     color: gray;
-    grid-column-start: 5;
-    grid-column-end: 7;
-    grid-row-start: 3;
-    width: 100%;
-    align-self: flex-start;
     font-weight: 400;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 .login {
-    grid-column-start: 3;
-    grid-row-start: 2;
-    align-self: center;
-    justify-self: flex-end;
+    
+     
 }
 
 .signup {
-    grid-column-start: 5;
-    grid-row-start: 2;
-    align-self: center;
-    justify-self: flex-start;
 }

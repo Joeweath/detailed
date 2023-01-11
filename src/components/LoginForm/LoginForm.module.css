@@ -14,10 +14,30 @@
   height: 70%;
   width: 75%;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+  padding-top: 8rem;
 
+}
+
+.logo {
+  color: gray;
+  font-size: 4rem;
+  align-self: center;
+  
+  
+ }
+
+ .inputandbuttons {
+  align-self: center;
+  
+  
+ }
+
+
+.buttondiv {
+  display: flex;
+  gap: 2rem;
 }
 
 
@@ -31,4 +51,5 @@
 
 .inputContainer {
   margin-bottom: 1rem;
+  
 }
