@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getTodoDetail } from "../../services/todoService";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import styles from './TodoCard.module.css'
 
 
 
@@ -21,22 +22,23 @@ const TodoCard = (props) => {
     fetchTodo()
   }, [id])
   return (
-    <div className="todo-card">
+    <div className={styles.container}>
+    <div className={styles.todocontainer}>
       {
         todo ? (
-        <div>
+        <div className={styles.cardcontent}>
             <h3>{todo.title}</h3>
             <p>{todo.content}</p>
-            <p>{Date(todo.date).slice(0, 15)}</p>
+            <p>Due Date: {Date(todo.date).slice(0, 15)}</p>
         </div>
         ) : (
           <i class="fa-solid fa-spinner fa-spin-pulse fa-spin-reverse fa-2xl"></i>
         )
       }
 
-<div className="card-footer">
+<div className={styles.buttons}>
         <Link
-          className='btn btn-sm btn-warning'
+          class='btn btn-sm btn-warning fa-2xl'
           to='/edit'
           state={{todo}}
         >
@@ -44,6 +46,7 @@ const TodoCard = (props) => {
         </Link>
         <button
           onClick={() => props.handleDelete(todo._id)}
+          class='btn btn-sm btn-danger fa-2xl'
         >
           Delete
         </button>
@@ -53,6 +56,7 @@ const TodoCard = (props) => {
 
 
         
+    </div>
     </div>
   )
 }

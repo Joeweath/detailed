@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import styles from './EditTodo.module.css'
 
 const EditTodo = props => {
 
@@ -23,8 +24,9 @@ const EditTodo = props => {
   }
   
   return (
-        <div>
-            <h1>Edit Todo</h1>
+        <div className={styles.container}>
+          <div className={styles.edittodocontainer}>
+            <h1  className={styles.header}>Edit Todo</h1>
             <form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
                 <div>
                 <label>
@@ -57,7 +59,7 @@ const EditTodo = props => {
           required
         />
       </label>
-
+    
       <button 
         type="submit"
         className="btn btn-primary btn-fluid"
@@ -65,8 +67,6 @@ const EditTodo = props => {
       >
         Save To-Do
       </button>
-                </div>
-                <div className="d-grid">
 					<Link
 						to="/"
 						className="btn btn-danger btn-fluid"
@@ -75,6 +75,7 @@ const EditTodo = props => {
 					</Link>
 				</div>
             </form>
+          </div>
         </div>
     )
 }

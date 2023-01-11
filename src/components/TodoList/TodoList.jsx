@@ -29,7 +29,7 @@ console.log(userList.length)
             <div className={styles.todocard}>
             <Link to={todo._id} key={todo._id} >
               <p className={styles.title}>{todo.title}</p>
-              <p className={styles.content}>{todo.content}</p>
+              <p className={styles.content}>{todo.content.slice(0, 40)}</p>
               <p className={styles.date} >{Date(todo.date).slice(0, 15)}</p>
             </Link>
             </div>
